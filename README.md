@@ -1,9 +1,7 @@
 # GenMamba: Physics-Gated Generative Distillation for Frequency-Aware Real-Time Video Dehazing
 
-> Official repository for **GenMamba**, a frequency-aware recursive framework for real-time video dehazing.
-
 <p align="center">
-  <img src="./assets/demo.gif" alt="GenMamba demo" width="800"/>
+  <img src="demo.gif" alt="GenMamba demo" width="800"/>
 </p>
 
 ## Overview
@@ -36,7 +34,9 @@ GenMamba follows a teacher-student design:
 - A **Low-Frequency branch** models structure and temporal consistency
 - A **High-Frequency branch** restores textures via large-kernel refinement and cross-frequency interaction
 
-## Demo
+<p align="center">
+  <img src="framework.png" alt="GenMamba demo" width="800"/>
+</p>
 
-A qualitative demo is shown above.  
-More visual results, failure cases, and downstream detection examples are provided in the paper and supplementary material.
+
+The code will be released upon acceptance of the paper.
