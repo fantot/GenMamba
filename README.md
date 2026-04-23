@@ -1,4 +1,4 @@
-# GenMamba: Physics-Gated Generative Distillation for Frequency-Aware Real-Time Video Dehazing
+# GenMamba: Efficient Real-Time Video Dehazing via Physics-Gated Generative Distillation
 
 <p align="center">
   <img src="demo.gif" alt="GenMamba demo" width="800"/>
@@ -6,37 +6,36 @@
 
 ## Overview
 
-Real-time video dehazing remains challenging because high-fidelity texture restoration often conflicts with efficient inference and temporal stability.  
-GenMamba addresses this problem with a **frequency-aware recursive architecture** that combines:
+Real-time video dehazing remains a challenging problem in video technology because high-fidelity texture restoration often conflicts with efficient inference and temporal stability.  
+GenMamba addresses this by introducing a **frequency-aware recursive architecture** that is designed for practical, real-time video restoration:
 
 - **Recursive Mamba / VSSD-based implicit alignment** for efficient spatiotemporal modeling
-- **Dual-branch frequency decoupling** for stable structure recovery and texture enhancement
-- **Physics-Gated Latent Distillation** to transfer generative priors while suppressing hallucinations
-- **Alignment-Free Temporal Contrastive Regularization** for unsupervised training on real-world videos
+- **Dual-branch frequency decoupling** to stabilize structure recovery and enhance textures
+- **Physics-Gated Latent Distillation** for transferring generative priors while suppressing hallucinations
+- **Alignment-Free Temporal Contrastive Regularization** for unsupervised learning on real-world videos
 
-GenMamba achieves strong perceptual quality and temporal consistency on real-world video dehazing benchmarks, while maintaining real-time efficiency.
+GenMamba achieves strong perceptual quality and temporal consistency on real-world video dehazing benchmarks, while maintaining **real-time efficiency (32.4 FPS)** and significantly reduced computational cost.
 
-## Highlights
+## Key Features
 
-- Real-time video dehazing with **32.4 FPS**
-- More than **90% FLOPs reduction** compared with Transformer-based alternatives
-- Strong temporal coherence without explicit optical flow alignment
-- Physics-guided generative enhancement for realistic high-frequency detail recovery
-- Effective unsupervised learning with non-aligned semantic reference matching
+- Efficient real-time video dehazing with **32.4 FPS**
+- Over **90% FLOPs reduction** compared with Transformer-based baselines
+- Maintains temporal coherence without explicit optical flow
+- Physics-guided generative enhancement for high-frequency textures
+- Supports unsupervised training with non-aligned semantic reference matching
 
 ## Framework
 
-GenMamba follows a teacher-student design:
+The GenMamba framework follows a **teacher-student paradigm**:
 
-- A **lightweight recursive Mamba student** performs efficient video dehazing
-- A **frozen diffusion teacher** provides generative priors during training only
-- A **Physics-Gated Latent Distillation** mechanism constrains generative guidance to degraded regions
-- A **Low-Frequency branch** models structure and temporal consistency
-- A **High-Frequency branch** restores textures via large-kernel refinement and cross-frequency interaction
+- **Lightweight recursive Mamba student** for efficient video dehazing
+- **Frozen diffusion teacher** providing generative priors during training only
+- **Physics-Gated Latent Distillation** constraining generative guidance to degraded regions
+- **Low-Frequency branch** modeling stable structure and temporal consistency
+- **High-Frequency branch** enhancing textures via large-kernel refinement and cross-frequency interaction
 
 <p align="center">
-  <img src="framework.png" alt="GenMamba demo" width="800"/>
+  <img src="framework.png" alt="GenMamba framework" width="800"/>
 </p>
 
-
-The code will be released upon acceptance of the paper.
+> **Note:** The source code will be made publicly available upon acceptance of the paper. This repository currently provides a project overview, demonstration materials, and architecture illustrations associated with the submitted manuscript.
